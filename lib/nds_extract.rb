@@ -13,7 +13,7 @@ def directors_totals(directors_database)
   }
   count = 0
 
-    result[:movies] = [ ]
+    result = [ ]
 
       result[:worldwide_gross] = [ ]
 
