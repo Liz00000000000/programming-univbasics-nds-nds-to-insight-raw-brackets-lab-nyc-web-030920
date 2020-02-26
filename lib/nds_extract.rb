@@ -11,19 +11,22 @@ def directors_totals(directors_database)
   # The Hash result be full of things like "Jean-Pierre Jeunet" => "222312123123"
   result = {
   }
-  count = 0
+  dir_index = 0
+    while dir_index < nds.length do
+      movies_index = 0
+      directors_totals = 0
 
+      while movies_index < nds[dir_index][:movies].length do
+        directors_totals += nds[dir_index][:movies][movies_index][:worldwide_gross]
+        movies_index += 1
 
-  while count < directors_database.size do
+      end
+      result.merge!(nds[dir_index][:name] => directors_totals)
+      dir_index += 1
 
-    x = directors_database[:movies][count][:worldwide_gross]
+    end
+    result
 
-    result[[:movie][[:worldwide_gross] = 0 + x]]
-
-    count +=1
-
-  end
-  puts result
 
 
   # Use loops, variables and the accessing method, [], to loop through the NDS
@@ -34,6 +37,5 @@ def directors_totals(directors_database)
   #
   #
   # Be sure to return the result at the end!
-  return result
   nil
 end
