@@ -18,7 +18,7 @@ def directors_totals(directors_database)
 
     x = directors_database[:movies][count][:worldwide_gross]
 
-    result[:movie][[:worldwide_gross] = 0 + x]
+    result[[:movie][[:worldwide_gross] = 0 + x]]
 
     count +=1
 
