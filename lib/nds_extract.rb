@@ -12,21 +12,21 @@ def directors_totals(directors_database)
   result = {
   }
   count = 0
- 
+
     result[:movies] = [ ]
- 
+
       result[:worldwide_gross] = [ ]
- 
+
   while count < directors_database.size do
- 
+
     x = directors_database[:movies][count][:worldwide_gross]
-   
+
     result[:worldwide_gross] = 0 + x
-   
+
     result[:movies] << directors_database[:movies][count]
-   
+
     count +=1
- 
+
   end
   puts result
 
