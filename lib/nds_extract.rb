@@ -12,16 +12,25 @@ def directors_totals(directors_database)
   result = {
   }
   count = 0
+ 
+    result[:movies] = [ ]
+ 
+      result[:worldwide_gross] = [ ]
+ 
   while count < directors_database.size do
-  resutls[directors_database[count][:names]] = x
-  count += 1
+ 
+    x = directors_database[:movies][count][:worldwide_gross]
+   
+    result[:worldwide_gross] = 0 + x
+   
+    result[:movies] << directors_database[:movies][count]
+   
+    count +=1
+ 
+  end
+  puts result
 
 
-  counts = 0
-  while counts < directors_database[:movies].size do
-   directors_database[:movies][counts][:worldwide_gross] == x
-   counts += 1
-  #
   # Use loops, variables and the accessing method, [], to loop through the NDS
   # and total up all the
   # ...
