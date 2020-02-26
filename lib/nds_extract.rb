@@ -3,7 +3,7 @@ require 'directors_database'
 
 pp directors_database
 
-def directors_totals(directors_database)
+def directors_totals(nds)
   # Remember, it's always OK to pretty print what you get *in* to make sure
   # that you know what you're starting with!
   #
@@ -11,6 +11,7 @@ def directors_totals(directors_database)
   # The Hash result be full of things like "Jean-Pierre Jeunet" => "222312123123"
   result = {
   }
+  
   dir_index = 0
     while dir_index < nds.length do
       movies_index = 0
@@ -26,9 +27,6 @@ def directors_totals(directors_database)
 
     end
     result
-
-
-
   # Use loops, variables and the accessing method, [], to loop through the NDS
   # and total up all the
   # ...
@@ -37,5 +35,5 @@ def directors_totals(directors_database)
   #
   #
   # Be sure to return the result at the end!
-  nil
+
 end
